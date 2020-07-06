@@ -322,6 +322,29 @@
 
 <p>  <img src="https://user-images.githubusercontent.com/38938417/86579915-86816e00-bfb0-11ea-86eb-19a6dd7114ed.png" alt="change_theme"></p>
 </li>
+<li><p>新建文章</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"文章名"</span></span><br></pre></td></tr></table></figure>
+
+<p>然后会在<code>source/_posts</code>下找到文章的makedown文件</p>
+<p>如果要在文章中插入图片, 需要在根目录下的<code>_config.yml</code>更改<code>post_asset_folder: true</code></p>
+<ul>
+<li><p>部署到gitpage上</p>
+<ul>
+<li><p>安装插件</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加gitpage仓库</p>
+<p>  在<code>_config.yml</code>中添加如下</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新上传</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
 </ul>
 
           
